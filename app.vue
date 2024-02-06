@@ -46,7 +46,7 @@ useSeoMeta({
       <a
         class="underline hover:text-black"
         href="https://github.com/IgorHalfeld/ifyouwantyesbro"
-        >Repo do github 👀</a
+        >Repo do github (IgorHalfeld/ifyouwantyesbro) 👀</a
       >
       <a
         class="underline hover:text-black"
