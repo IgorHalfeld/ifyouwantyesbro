@@ -1,15 +1,15 @@
 <script setup lang="ts">
 import { MessageCircleQuestion, Handshake } from "lucide-vue-next";
 
-const { loading, question, answear, askToRamon, reset } = useRamonAI();
+const { loading, question, answer, askToRamon, reset } = useRamonAI();
 
 const label = computed(() => {
   if (loading.value) {
     return "Perguntando ao ramon...";
   }
 
-  if (Boolean(answear.value)) {
-    return answear.value;
+  if (Boolean(answer.value)) {
+    return answer.value;
   }
 
   return "Qual a sua pergunta para o ramon?";
@@ -74,7 +74,7 @@ useSeoMeta({
 
         <div>
           <button
-            v-if="!Boolean(answear)"
+            v-if="!Boolean(answer)"
             :class="{
               'opacity-50 cursor-not-allowed': loading,
             }"
@@ -85,7 +85,7 @@ useSeoMeta({
             Perguntar ao ramon
           </button>
           <button
-            v-if="Boolean(answear)"
+            v-if="Boolean(answer)"
             @click="reset()"
             :class="{
               'opacity-50 cursor-not-allowed': loading,
