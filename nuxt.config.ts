@@ -9,6 +9,9 @@ export default defineNuxtConfig({
   },
 
   googleFonts: {
+    base64: true,
+    fontsDir: "assets/fonts",
+    overwriting: true,
     families: {
       Inter: [300, 800],
     },
