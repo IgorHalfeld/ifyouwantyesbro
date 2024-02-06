@@ -1,11 +1,11 @@
 export interface RamonAIResponse {
-  answear: string;
+  answer: string;
 }
 
 export function useRamonAI() {
   const loading = ref<boolean>(false);
   const question = ref<string>("");
-  const answear = ref<string>();
+  const answer = ref<string>();
 
   async function askToRamon() {
     loading.value = true;
@@ -17,19 +17,19 @@ export function useRamonAI() {
       },
     });
 
-    answear.value = response.answear;
+    answer.value = response.answer;
     loading.value = false;
   }
 
   function reset() {
     question.value = "";
-    answear.value = undefined;
+    answer.value = undefined;
   }
 
   return {
     loading,
     question,
-    answear,
+    answer,
     askToRamon,
     reset,
   };

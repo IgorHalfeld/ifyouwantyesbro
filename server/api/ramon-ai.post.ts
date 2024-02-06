@@ -15,6 +15,6 @@ export default defineEventHandler(async (event) => {
   );
 
   return {
-    answear: "Se quiser sim mano 👍🏻",
+    answer: "Se quiser sim mano 👍🏻",
   };
 });
